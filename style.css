@@ -186,12 +186,13 @@ a {
     font-size: 13px;
     outline: 0;
     padding-left: 10px;
+    margin-left: -30px;
 }
 .popup-body-input-icon {
     position: absolute;
     width: 34px;
     height: 100%;
-    right: -14px;
+    right: -30px;
     font-size: 14px;
     top: 0;
     background: #8E59FF;
