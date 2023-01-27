@@ -50,6 +50,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 .container-first {
     display: flex;
@@ -117,6 +118,8 @@ a {
 }
 .container-item-share {
     width: 22px;
+    z-index: 100;
+    cursor: pointer;
 }
 .container-line {
     background: #5F19A5;
@@ -127,13 +130,79 @@ a {
 }
 .privacy-policy {
     color: #ABAAAA;
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
     font-size: 13px;
 }
-
+.popup {
+    opacity: 0;
+    pointer-events: none;
+    transition: .4s;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 11, 13, 0.63);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.popup-body {
+    background: linear-gradient(213.81deg, #1C0D2F 6.08%, #2E0C5A 91.84%);
+    border-radius: 20px;
+    padding: 20px 14px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.popup-body-title {
+    color: #fff;
+    margin-bottom: 20px;
+}
+.popup-body-copy {
+    position: relative;
+}
+.popup-body-input {
+    background: rgba(88, 104, 248, 0.37);
+    border: 1px solid #4D08DE;
+    border-radius: 8px;
+    height: 30px;
+    width: 200px;
+    padding: 0 12px;
+}
+.popup-body-input::placeholder {
+    color: #fff;
+}
+.popup-body-input-icon {
+    position: absolute;
+    width: 34px;
+    height: 100%;
+    right: 0px;
+    font-size: 14px;
+    top: 0;
+    background: #8E59FF;
+    /* border: 1px solid #4D08DE; */
+    border-radius: 0px 5px 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.popup-body-input-icon img {
+    width: 14px;
+}
 @media(max-width:500px) {
     .container-item {
         width: 300px;
