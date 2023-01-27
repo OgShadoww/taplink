@@ -152,10 +152,6 @@ a {
     align-items: center;
     z-index: 100;
 }
-.active {
-    opacity: 1;
-    pointer-events: all;
-}
 .popup-body {
     background: linear-gradient(213.81deg, #1C0D2F 6.08%, #2E0C5A 91.84%);
     border-radius: 20px;
@@ -166,10 +162,11 @@ a {
     justify-content: center;
     align-items: center;
     z-index: 100;
+    position: relative;
 }
 .popup-body-title {
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .popup-body-copy {
     position: relative;
@@ -205,6 +202,24 @@ a {
 }
 .popup-body-input-icon img {
     width: 14px;
+}
+.completed {
+    opacity: 0;
+    pointer-events: none;
+    transition: .4s;
+    background-color: #6007BA;
+    color: #79A7FF;
+    font-size: 12px;
+    padding: 3px 5px;
+    border-radius: 6px;
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    z-index: 10;
+}
+.active {
+    opacity: 1;
+    pointer-events: all;
 }
 @media(max-width:500px) {
     .container-item {

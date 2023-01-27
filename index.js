@@ -23,10 +23,15 @@ copyLink.forEach(copy =>
     copy.addEventListener('click', (e) => {
         e.stopPropagation()
         let input = document.querySelector(`.${copy.getAttribute('data-link')}`)
+        let tooltip = document.querySelector(`.tooltip-${copy.getAttribute('data-link')}`)
         input.disabled = false;
+        tooltip.classList.add('active')
         input.select();
         input.disabled = true
         document.execCommand('copy');
         window.getSelection().removeAllRanges()
+        setTimeout(() => {
+            tooltip.classList.remove('active')
+        }, 2000)
     })    
 )
