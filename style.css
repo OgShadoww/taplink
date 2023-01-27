@@ -177,7 +177,8 @@ a {
 .popup-body-input {
     background: rgba(88, 104, 248, 0.37);
     border: 1px solid #4D08DE;
-    border-radius: 8px;
+    /* border-radius: 8px; */
+    border-radius: 8px 0px 0px 8px;
     height: 30px;
     min-width: 200px;
     color: #fff;
