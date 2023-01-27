@@ -1,22 +1,32 @@
-const popup = document.querySelector('.popup')
-const popupBody = document.querySelector('.popup-body')
+const popup = document.querySelectorAll('.popup')
+const popupBody = document.querySelectorAll('.popup-body')
 const buttons = document.querySelectorAll('.container-item-share')
+const copyLink = document.querySelectorAll('.popup-body-input-icon')
 
-popupBody.addEventListener('click', (e) => {
+popupBody.forEach(popup => popup.addEventListener('click', (e) => {
     e.stopPropagation()
-})
-popup.addEventListener('click', () => {
+}))
+popup.forEach(popup => popup.addEventListener('click', () => {
     popup.classList.remove('active')
-})
+}))
 
 buttons.forEach(button => 
     button.addEventListener('click', (e) => {
         e.preventDefault()
-        popup.classList.add('active')
-        console.log('f')
+        openModal(button.getAttribute('data-value'))
     })
 )
-
 function openModal (id) {
-    document.querySelector(``)
+    document.querySelector(`.popup[data-popup='${id}']`).classList.add('active')
 }
+copyLink.forEach(copy => 
+    copy.addEventListener('click', (e) => {
+        e.stopPropagation()
+        let input = document.querySelector(`.${copy.getAttribute('data-link')}`)
+        input.disabled = false;
+        input.select();
+        input.disabled = true
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges()
+    })    
+)

@@ -179,17 +179,19 @@ a {
     border: 1px solid #4D08DE;
     border-radius: 8px;
     height: 30px;
-    width: 200px;
-    padding: 0 12px;
-}
-.popup-body-input::placeholder {
+    min-width: 200px;
     color: #fff;
+    text-overflow: clip;
+    width: 100%;
+    font-size: 13px;
+    outline: 0;
+    padding-left: 10px;
 }
 .popup-body-input-icon {
     position: absolute;
     width: 34px;
     height: 100%;
-    right: 0px;
+    right: -12px;
     font-size: 14px;
     top: 0;
     background: #8E59FF;
