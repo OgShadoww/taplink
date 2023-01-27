@@ -14,6 +14,7 @@ a {
     text-align: center;
     overflow: hidden;
     padding: 0 10px;
+    padding-top: 30px;
 }
 .top__light {
     position: absolute;
@@ -35,6 +36,14 @@ a {
     position: relative;
     color: #6351D5;
     margin-bottom: 70px;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.title img {
+    width: 32px;
 }
 .container {
     display: flex;
