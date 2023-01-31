@@ -224,6 +224,9 @@ a {
     pointer-events: all;
 }
 @media(max-width:500px) {
+    body {
+        overflow: auto;
+    }
     .container-item {
         width: 300px;
     }
