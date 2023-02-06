@@ -38,6 +38,17 @@ a {
     height: 100%;
     position: absolute;
 }
+.graph-left {
+    left: 15%;
+    width: 330px;
+    height: auto;
+}
+.graph-right {
+    right: 5%;
+    top: -10%;
+    width: 530px;
+    height: auto;
+}
 .title {
     position: relative;
     color: #6351D5;
@@ -223,6 +234,20 @@ a {
     opacity: 1;
     pointer-events: all;
 }
+@media(max-width:1110px) {
+    .graph-right {
+        display: none;
+    }
+    .graph-left {
+        left: 10%;
+    }
+}
+@media(max-width:890px) {
+    .graph-left {
+        left: 5%;
+        width: 280px;
+    }
+}
 @media(max-width:500px) {
     body {
         overflow: auto;
@@ -241,5 +266,10 @@ a {
     }
     .container-line {
         width: 380px;
+    }
+    .graph-left {
+        left: -5%;
+        width: 240px;
+        top: 0%;
     }
 }
